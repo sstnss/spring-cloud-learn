@@ -6,3 +6,9 @@ user:
   name: someone
   sex: male
   address: fuzhou of china
+#pageHepler分页插件
+pagehelper:
+    helperDialect: mysql
+    reasonable: true
+    supportMethodsArguments: true
+    params: count=countSql

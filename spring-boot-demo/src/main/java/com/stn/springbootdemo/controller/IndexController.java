@@ -1,7 +1,11 @@
 package com.stn.springbootdemo.controller;
 
+import com.github.pagehelper.Page;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.stn.springbootdemo.dao.UserRep;
 import com.stn.springbootdemo.model.User;
+import com.stn.springbootdemo.wrapper.WrapperPage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
@@ -77,8 +81,17 @@ public class IndexController {
     }
 
     @RequestMapping(value = {"/getPage"},method = {RequestMethod.GET,RequestMethod.POST})
-    public List<User> getPage(@RequestParam(defaultValue="nobody") String name){
-        return userRep.findAllByName(name);
+    public WrapperPage getPage(@RequestParam(defaultValue="nobody") String name,
+                        Integer pageNum, Integer pageSize){
+        pageNum = pageNum == null ? 1 : pageNum;
+        pageSize = pageSize == null ? 10 : pageSize;
+        PageHelper.startPage(pageNum, pageSize);
+        System.out.println("debug ===="+pageNum);
+        List<User> list=userRep.findAll();
+        System.out.println("debug ====find");
+        PageInfo pageInfo = new PageInfo(list);
+        System.out.println("debug ====pageInfo");
+        return WrapperPage.ok(pageInfo);
     }
 
     @RequestMapping(value = {"/config"},method = {RequestMethod.GET,RequestMethod.POST})
