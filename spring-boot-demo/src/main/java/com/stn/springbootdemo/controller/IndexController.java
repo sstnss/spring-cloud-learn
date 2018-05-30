@@ -50,13 +50,16 @@ public class IndexController {
     @RequestMapping(value = {"/update"},method = {RequestMethod.GET,RequestMethod.POST})
     public User update(@RequestParam(defaultValue="somebody") String name,
                        @RequestParam(defaultValue="female") String sex,
-                       @RequestParam(defaultValue="china") String address){
+                       @RequestParam(defaultValue="china") String address,
+                       @RequestParam(defaultValue="json_testfdsfd") String json_test
+                       ){
         User exist=userRep.findByName(name);
         User user=new User();
         user.setId(exist.getId());
         user.setName(name);
         user.setSex(sex);
         user.setAddress(address);
+        user.setJsonTest(json_test);
         userRep.save(user);
         return userRep.findByName(name);
     }

@@ -6,6 +6,8 @@ import javax.annotation.Generated;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import com.alibaba.fastjson.annotation.JSONField;
+
 
 @Entity
 public class User {
@@ -16,6 +18,17 @@ public class User {
     private String name;
     private String sex;
     private String address;
+
+    public String getJsonTest() {
+        return jsonTest;
+    }
+
+    public void setJsonTest(String jsonTest) {
+        this.jsonTest = jsonTest;
+    }
+
+    //@JSONField(name="json_test")
+    private String jsonTest;
 
     public Integer getId() {
         return id;
