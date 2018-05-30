@@ -3,6 +3,8 @@ package com.stn.springbootdemo.controller;
 import com.stn.springbootdemo.dao.UserRep;
 import com.stn.springbootdemo.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -10,8 +12,15 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+@PropertySource(value = "classpath:test.yml")
 @RestController
 public class IndexController {
+    @Value("${page}")
+    private Integer page;
+    @Value("${size}")
+    private Integer size;
+    @Value("${application_name}")
+    private String application_name;
 
     @Autowired
     private UserRep userRep;
@@ -68,6 +77,13 @@ public class IndexController {
     public List<User> getPage(@RequestParam(defaultValue="nobody") String name){
         return userRep.findAllByName(name);
     }
+
+    @RequestMapping(value = {"/config"},method = {RequestMethod.GET,RequestMethod.POST})
+    public String config(){
+        return "page: "+page+" size: "+size+" application_name: "+application_name;
+    }
+
+
 
 
 }

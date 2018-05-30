@@ -11,7 +11,9 @@
   * [spring-data-jpa](https://www.cnblogs.com/dreamroute/p/5173896.html)`通过findByxxx可查询`
   * [spring cloud 与spring boot 版本对应关系](https://blog.csdn.net/ljj_9/article/details/78645267)
   * [markdown简单语法](https://www.jianshu.com/p/191d1e21f7ed)
-  
+  * [spring boot配置文件与多环境配置](https://blog.csdn.net/forezp/article/details/70437576)`创建多个application-dev.yml,application-prod.yml 并在application.yml中指定环境启动spring:
+                                                                                                                                                          profiles:
+                                                                                                                                                            active: dev`
   
   
   
