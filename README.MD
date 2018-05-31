@@ -1,6 +1,7 @@
 - **spring cloud 学习笔记**
 
 - [**spring cloud git教程**](https://github.com/forezp/SpringCloudLearning)
+- [**spring cloud教程**](https://blog.csdn.net/forezp/article/details/70148833/)
 
 -[两小时学习spring boot](https://blog.csdn.net/forezp/article/details/61472783)
   * [idea 构建工程](#ideal_build)`new prpject -> spring initializr`
@@ -16,6 +17,19 @@
   * [spring boot整合mybatis详细版](http://blog.720ui.com/2016/springboot_02_data_mybatis/) `可用阿里的fastjson转换json中的key与bean中的属性不能匹配问题，@JSONField进行注解`
   * [mybatis自动生成实体类](https://blog.csdn.net/u011734144/article/details/60351678) `mybatis-generator-maven-plugin插件自动生成代码` 
   * [spring boot整合PageHelper](https://www.cnblogs.com/onetwo/p/7371778.html)  [github](https://github.com/pagehelper/Mybatis-PageHelper/blob/master/wikis/zh/HowToUse.md)                                                                                                                                                     
+  * [spring boot redis](https://www.cnblogs.com/EasonJim/p/7805665.html)[哨兵模式](https://www.cnblogs.com/EasonJim/p/7805665.html) [操作数据](https://www.cnblogs.com/EasonJim/p/7803067.html)`redisTemplate.opsForValue();//操作字符串
+                                                                                                                                                                                        redisTemplate.opsForHash();//操作hash
+                                                                                                                                                                                        redisTemplate.opsForList();//操作list
+                                                                                                                                                                                        redisTemplate.opsForSet();//操作set
+                                                                                                                                                                                        redisTemplate.opsForZSet();//操作有序set`
+  * [关于RedisTemplate和StringRedisTemplate](https://blog.csdn.net/notsaltedfish/article/details/75948281)`推荐用StringRedisTemplate`   
+     
+     
+     
+     
+     
+     
+     
                                                                                                                                                            
                                                                                                                                                            active: dev`
   
