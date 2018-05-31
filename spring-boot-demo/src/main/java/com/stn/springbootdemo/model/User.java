@@ -27,7 +27,7 @@ public class User {
         this.jsonTest = jsonTest;
     }
 
-    //@JSONField(name="json_test")
+    @JSONField(name="json_test")
     private String jsonTest;
 
     public Integer getId() {

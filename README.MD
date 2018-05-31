@@ -23,11 +23,12 @@
                                                                                                                                                                                         redisTemplate.opsForSet();//操作set
                                                                                                                                                                                         redisTemplate.opsForZSet();//操作有序set`
   * [关于RedisTemplate和StringRedisTemplate](https://blog.csdn.net/notsaltedfish/article/details/75948281)`推荐用StringRedisTemplate`   
-     
-     
-     
-     
-     
+  * [基于Spring的Restful接口生成工具](https://www.jianshu.com/p/ecb8daa4ecf7)`swagger2 Asciidoc asciidoctor` [实例](https://blog.csdn.net/forezp/article/details/71023510)   
+  * [spring boot缓存](https://blog.csdn.net/forezp/article/details/71023614) [缓存完整](http://jinnianshilongnian.iteye.com/blog/2001040)`Spring Cache注解对于大多数场景够用了，如果场景复杂还是考虑使用AOP吧；如果自己实现请考虑使用Spring Cache API进行缓存抽象`   
+  * [spring boot定时任务](https://blog.csdn.net/forezp/article/details/71023783)[`表达式类似crontab`](https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/scheduling/support/CronSequenceGenerator.html)   
+  * [spring boot Validator](https://blog.csdn.net/wingkoo1986/article/details/70768730) [实例](https://blog.csdn.net/forezp/article/details/71023817)  [介绍2](https://www.cnblogs.com/mr-yang-localhost/p/7812038.html)`可用分组功能实现特定操作对特定字段进行验证`
+  * [spring boot docker](https://blog.csdn.net/forezp/article/details/71024219)   
+  * [spring boot集成tk.mybatis制作通用baseDao/baseService](https://blog.csdn.net/shikaiwencn/article/details/52485883)
      
      
                                                                                                                                                            
